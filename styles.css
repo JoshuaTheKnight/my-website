@@ -1,0 +1,71 @@
+/* type selectors*/
+body{
+    background-color: #f0efef;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+  color: #ffffff;
+  background-color: #ff0000;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  border: .1em solid #ff0000;
+  border-radius: 2em;
+  
+}
+
+p, li{
+    font-size: 115%;
+    font-weight: 150;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer{
+    font-size: 70%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align:right;
+}
+
+/*class selectors*/
+/*Sets up a flex container set to a column so I can center images*/
+.center-container{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50em;
+}
+
+/*Sets the size of the images*/
+.center-container img{
+    max-width: 30%;
+    max-height:20%;
+}
+
+/*Spaces the text out*/
+.center-container h3{
+    margin-top: 2em;
+}
+
+/*Sets a rainbow text effect. the background clip fills in the transparent text with the rainbow background gradient. Had to add webkit properties because it wasn't rendering properly in my browser */
+.rainbow{
+    background-image: linear-gradient(to left, #cc49cc, #4b0082, #0000ff, #008000, #969607, #b87b0b, #ff0000);
+    background-clip: text;
+    color: #ffffff00;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif  
+}
+
+/*pseudo classes*/
+:link{
+    color: #ff0000;
+}
+
+:visited{
+    color: #6e0000;
+}
+
