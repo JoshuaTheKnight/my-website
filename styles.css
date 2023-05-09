@@ -1,54 +1,95 @@
-/* type selectors*/
+/*Reset*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/*header styles*/
+header{
+    background-image: url(Images/nintendo_pattern.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9em;
+    border-bottom: .1em solid black;
+    
+}
+
+h1{  
+    color: #ffffff;
+    background-color: #ff0000;
+    width: 60%;
+    text-align: center;
+    border: .1em solid #ff0000;
+    border-radius: 2em; 
+}
+/*body styles*/
 body{
     background-color: #f0efef;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-h1{
-  color: #ffffff;
-  background-color: #ff0000;
-  width: 50%;
-  margin: auto;
-  text-align: center;
-  border: .1em solid #ff0000;
-  border-radius: 2em;
-  
+    margin: 0;
 }
 
 p, li{
-    font-size: 115%;
+    font-size: 150%;
     font-weight: 150;
     font-family: 'Times New Roman', Times, serif;
 }
+/*section styles*/
+section{
+    float: left;
+    width: 40%;
+    margin-top: 1em;
+    margin-left: 2em;
+}
 
+section p{
+    margin-bottom: 3em;
+}
+
+section ul{
+    padding-top: .5em;
+    padding-left: 3em;
+    margin-bottom: 1em;
+}
+/*Aside styles*/
+aside{
+    float: left;
+    text-align: right;
+    width: 50%;
+}
+
+aside h2{
+    padding-bottom: 1em;
+    margin-top: 1em;
+}
+
+aside h2, h3{
+    text-align: right;
+    margin-right: 2em;
+}
+
+aside img{
+    max-width: 70%;
+    max-height:20%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    margin-right: 2em;
+    
+}
+/*Footer styles*/
 footer{
-    font-size: 70%;
+    font-size: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align:right;
+    text-align:center;
+    clear: both;
+    background-color: #ff0000;
+    color: #ffffff;
+    height: 2.5em;
 }
 
 /*class selectors*/
-/*Sets up a flex container set to a column so I can center images*/
-.center-container{
-    position:relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50em;
-}
-
-/*Sets the size of the images*/
-.center-container img{
-    max-width: 30%;
-    max-height:20%;
-}
-
-/*Spaces the text out*/
-.center-container h3{
-    margin-top: 2em;
-}
-
+ 
 /*Sets a rainbow text effect. the background clip fills in the transparent text with the rainbow background gradient. Had to add webkit properties because it wasn't rendering properly in my browser */
 .rainbow{
     background-image: linear-gradient(to left, #cc49cc, #4b0082, #0000ff, #008000, #969607, #b87b0b, #ff0000);
