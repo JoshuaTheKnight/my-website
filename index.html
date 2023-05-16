@@ -4,16 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Nintendo Game Review</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JavaScript/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
 </head>
 <body>
     <header>
         <h1 >Reviewing My Favorite Nintendo Games</h1>
     </header>
+    <!--Navigation Menu-->
+    <nav id="mobile_menu"></nav>
+	<nav id="nav_menu">
+    	<ul>
+        	<li><a href="index.html">Home</a></li>
+        	<!--Multi-Tier Navigation-->
+            <li><a href="speakers.html">Reviews</a>
+                <ul>
+					<li><a href="xenoblade.html">Xenoblade Chronicles</a></li>
+					<li><a href="breath-of-the-wild.html">Legend of Zelda: Breath of the Wild</a></li>
+					<li><a href="pokemon-black-white.html">Pokemon Black and White</a></li>
+				</ul>
+            </li>
+        	<li><a id="button" href="#about">About</a></li>
+    	</ul>
+	</nav>
 
     <main>
-        <section>
+        <section id="about">
             <!--Introduction Section-->
         <h2>Nintendo is One of My Favorite Game Companies</h2>
         <p>
@@ -36,18 +60,18 @@
             however, I will still give them a final letter grade to preserve the culture.
         </p>
         </section>
-
+        <!--Leaving this here for now, but this is in need of a revamp due to the new navigation-->    
         <aside>
-            <h2>Select a Game to View Review:</h2>
+            <h2>Check Out My Recent Reviews in a New Tab!</h2>
         <!--Links to other pages for review-->
-            <h3><a href="xenoblade.html">Xenoblade Chronicles</a></h3>
-            <img src="Images/xenoblade.jpg" alt="Xenoblade Chronicles Title Screen" height="300">
+            <h3><a href="xenoblade.html" target="_blank">Xenoblade Chronicles</a></h3>
+            <img src="Images/xenoblade.jpg" alt="Xenoblade Chronicles Title Screen" >
         
-            <h3><a href="breath-of-the-wild.html">Legend of Zelda: Breath of the Wild</a></h3>
-            <img src="Images/breath-of-the-wild.jpg" alt="Legend of Zelda: Breath of the Wild Title Screen" height="300">
+            <h3><a href="breath-of-the-wild.html" target="_blank">Legend of Zelda: Breath of the Wild</a></h3>
+            <img src="Images/breath-of-the-wild.jpg" alt="Legend of Zelda: Breath of the Wild Title Screen" >
         
-            <h3><a href="pokemon-black-white.html">Pokemon Black and White</a></h3>
-            <img src="Images/pokemon-black-white.jpg" alt="Pokemon Black and White Title Screen" height="300">
+            <h3><a href="pokemon-black-white.html" target="_blank">Pokemon Black and White</a></h3>
+            <img src="Images/pokemon-black-white.jpg" alt="Pokemon Black and White Title Screen" >
         </aside>
         
     </main>   

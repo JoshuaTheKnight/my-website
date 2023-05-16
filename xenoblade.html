@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orangutan Review</title>
+    <title>Xenoblade Chronicles Review</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JavaScript/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
 </head>
 <body>
     <header>
         <h1>Under Construction</h1>
-        <h2><a href="index.html">Return to homepage</a></h2>
     </header>
+    <nav id="mobile_menu"></nav>
+	<nav id="nav_menu">
+    	<ul>
+        	<li><a href="index.html">Home</a></li>
+        	<li><a href="speakers.html">Reviews</a>
+                <ul>
+					<li><a href="xenoblade.html">Xenoblade Chronicles</a></li>
+					<li><a href="breath-of-the-wild.html">Legend of Zelda: Breath of the Wild</a></li>
+					<li><a href="pokemon-black-white.html">Pokemon Black and White</a></li>
+				</ul>
+            </li>
+        	<li><a href="index.html#about">About</a></li>
+    	</ul>
+	</nav>
+    <main>
+        <h2><a href="index.html">Return to homepage</a></h2>
+    </main>
 </body>
 </html>
