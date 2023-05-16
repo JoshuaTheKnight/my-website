@@ -71,10 +71,7 @@ h1{
 	content: "";
 	display: block;
 }
-/*hide mobile menu as a default*/
-#mobile_menu {
-	display: none;
-}
+
 
 /*body styles*/
 body{
@@ -194,14 +191,5 @@ footer{
     footer{
         font-size: 50%;
     }
-    /*Use Slicknav for Mobile Experience*/
-    #nav_menu {
-		display: none;
-	}
-	#mobile_menu {
-		display: block;
-	}
-	.slicknav_menu {
-		background-color: #ff0000 !important;
-	}
+  
 }
