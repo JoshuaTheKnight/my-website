@@ -13,7 +13,7 @@ header{
     align-items: center;
     height: 9em;
     border-bottom: .1em solid black;
-    
+    height: 12.5em;
 }
 
 h1{  
@@ -34,11 +34,10 @@ h1{
 	display: flex;
 	flex-basis: 100%;
     border-bottom: .01em solid #000000;
-    
 }
 #nav_menu ul li {
     flex-basis: 40%;              
-    border-right: .01em solid #000000;   
+    border-right: .01em solid #000000;  
 }
 #nav_menu ul li a {
     display: block;
@@ -75,7 +74,7 @@ h1{
 
 /*body styles*/
 body{
-    background-color: #f0efef;
+    background-color: #fafafa;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
 }
@@ -85,9 +84,14 @@ p, li{
     font-weight: 150;
     font-family: 'Times New Roman', Times, serif;
 }
-
+/*Setting up a basic grid layout now, plan to revamp entire layout but I need more time*/
 main{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 16px;
+    grid-template-areas:
+    "about about sidebar";
 }
 
 /*section styles*/
@@ -95,7 +99,8 @@ section{
     flex-basis: 40%;
     margin-top: 1.5em;
     margin-left: 2em;
-    padding: 0 .5em;
+    padding: 0 2em 0 .5em;
+    grid-area: about;
 }
 
 section p{
@@ -110,13 +115,23 @@ section ul{
 
 /*Aside styles*/
 aside{
-    text-align: right;
-    flex-basis: 50%;
+    text-align: center;
+    justify-content: center;
+    grid-area: sidebar;
+}
+/*Sets up an ease in out animation that makes the transform smooth*/
+aside div{
+    margin-bottom: 2em;
+    transition: transform 250ms ease-in-out;
+}
+/*Makes the hovered review grow by 10%.*/
+aside div:hover{
+    transform: scale(1.1);
 }
 
 aside h2{
     padding-bottom: 1em;
-    margin-top: 1em;
+    margin-top: .5em;
 }
 
 aside h2, h3{
@@ -124,13 +139,15 @@ aside h2, h3{
 }
 
 aside img{
-    max-width: 70%;
+    max-width: 60%;
     max-height:20%;
-    padding-bottom: 1em;
-    padding-top: 1em;
-    margin-right: 2em;
-    
+    margin:1em 3em 1em 0;
+    border-radius: 1.7em;
+    border: .01em solid black;
 }
+
+
+
 /*Footer styles*/
 footer{
     font-size: 100%;
@@ -162,6 +179,17 @@ footer{
 :visited{
     color: #6e0000;
 }
+
+@media only screen and (max-width: 1012px){
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, .5fr);
+        grid-template-areas:
+        "about"
+        "sidebar";
+    }
+}
+
 /*media query to swap to a column format*/
 @media only screen and (max-width: 691px){
     h1{
@@ -173,7 +201,6 @@ footer{
     }
     /*Switch to column format, increase width to take up more screen space so the content isn't so narrow*/
     main{
-        flex-direction: column;
         align-items: center;
     }
     section{
@@ -183,11 +210,7 @@ footer{
     aside{
         width: 90%;
         padding: 0 .5em;
-        text-align: left;
     }   
-    aside h2, h3{
-        text-align: left;
-    }
     footer{
         font-size: 50%;
     }
