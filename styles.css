@@ -7,82 +7,73 @@
 /*header styles*/
 
 header{
-    background-image: url(Images/nintendo_pattern.jpg);
+    background-image: linear-gradient(rgba(87, 87, 87, 0.5), rgba(26, 26, 26, 0.5)), url('Images/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
+    padding: 2em 0 2em 0;
     justify-content: center;
     align-items: center;
-    height: 9em;
     border-bottom: .1em solid black;
     height: 12.5em;
 }
 
 h1{  
     color: #ffffff;
-    background-color: #ff0000;
     width: 65%;
     text-align: center;
-    border: .05em solid #000000;
     border-radius: 2em; 
 }
 
 /*nav styles*/
-#nav_menu ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	position: relative;
-	display: flex;
-	flex-basis: 100%;
-    border-bottom: .01em solid #000000;
+#nav_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #262727;
+    border-bottom: .1em solid black;
 }
-#nav_menu ul li {
-    flex-basis: 40%;              
-    border-right: .01em solid #000000;  
-}
-#nav_menu ul li a {
-    display: block;
-    text-align: center;
-    padding: 1em 0;
+
+#nav_logo{
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    background-color: #ff0000;
-    color: white;
-    font-weight: bold;
-}
-/*sub-nav styles*/
-#nav_menu ul ul{
-	display: none;
-	position: absolute;
-	top: 100%;
-    width: 33.33%;
-    
-    border-top: none;
+    color: #ffffff;
+    font-size: 150%;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    flex: 1;
 }
 
-#nav_menu ul ul li{
-    border-top: .01em solid #000000;
+#nav_menu a img{
+    max-height: 2em;
+    max-width: 2em;
 }
 
-#nav_menu ul li:hover > ul{
-	display: block;
+#nav_menu li{
+    display: inline-block;
+    margin-right: 3em;
+    font-family: 'Montserrat', sans-serif;
 }
 
-#nav_menu > ul:after{
-	content: "";
-	display: block;
+#nav_menu li a{
+    text-decoration: none;
+    color: #ffffff;
+    flex: 2;
 }
-
 
 /*body styles*/
 body{
     background-color: #fafafa;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'PT Sans', sans-serif;
     margin: 0;
 }
 
 p, li{
     font-size: 150%;
     font-weight: 150;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 /*Setting up a basic grid layout now, plan to revamp entire layout but I need more time*/
 main{
@@ -92,6 +83,10 @@ main{
     grid-gap: 16px;
     grid-template-areas:
     "about about sidebar";
+}
+
+main h2{
+    font-size: 200%;
 }
 
 /*section styles*/
@@ -118,6 +113,7 @@ aside{
     text-align: center;
     justify-content: center;
     grid-area: sidebar;
+    margin-top: 1.5em;
 }
 /*Sets up an ease in out animation that makes the transform smooth*/
 aside div{
@@ -131,7 +127,6 @@ aside div:hover{
 
 aside h2{
     padding-bottom: 1em;
-    margin-top: .5em;
 }
 
 aside h2, h3{
@@ -150,10 +145,11 @@ aside img{
 
 /*Footer styles*/
 footer{
-    font-size: 100%;
+    font-size: 60%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align:center;
-    background-color: #ff0000;
+    text-align:left;
+    padding-left: 5em;
+    background-color: #262727;
     color: #ffffff;
     height: 2.5em;
 }
@@ -173,12 +169,14 @@ footer{
 
 /*pseudo classes*/
 :link{
-    color: #ff0000;
+    color: #000000;
 }
 
 :visited{
-    color: #6e0000;
+    color: #42C2FF;
 }
+
+
 
 @media only screen and (max-width: 1012px){
     main{
@@ -187,6 +185,26 @@ footer{
         grid-template-areas:
         "about"
         "sidebar";
+    }
+}
+
+@media only screen and (max-width: 825px){
+    #nav_menu{
+        flex-direction: column;
+    }
+
+    #nav_logo{
+        justify-content: center;
+    }
+
+    #nav_logo a{
+        order: 1;
+    }
+
+    #nav_menu li{
+        order: 2;
+        margin: .5em 2em .5em 2em;
+        flex-wrap: nowrap;
     }
 }
 
@@ -212,7 +230,21 @@ footer{
         padding: 0 .5em;
     }   
     footer{
-        font-size: 50%;
+        font-size: 40%;
     }
   
+}
+
+@media only screen and (max-width: 562px){
+    #nav_menu li {
+        font-size: 150%;
+        margin: .5em .5em .5em .5em;
+    }
+}
+
+@media only screen and (max-width: 330px){
+    #nav_menu li {
+        font-size: 150%;
+        margin: .5em .1em .5em .1em;
+    }
 }

@@ -6,39 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nintendo Game Review</title>
     <link rel="stylesheet" href="styles.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans:wght@300&family=PT+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bcb9fa309a.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
-    <header>
-        <h1 >Reviewing My Favorite Nintendo Games</h1>
-    </header>
     
     <!--Navigation Menu-->
 	<nav id="nav_menu">
-    	<ul>
-        	<li><a href="index.html">Home</a></li>
-        	<!--Multi-Tier Navigation-->
-            <li><a>Reviews</a>
-                <ul>
-					<li><a href="xenoblade.html">Xenoblade Chronicles</a></li>
-					<li><a href="breath-of-the-wild.html">Legend of Zelda: Tears of the Kingdom</a></li>
-					<li><a href="pokemon-black-white.html">Pokemon Black and White</a></li>
-				</ul>
+    	<a id="nav_logo" href="index.html">
+            <img src="Images/logo.png" alt="Crystal Heart Logo">
+            Crystal Heart
+        </a>
+        <ul>
+        	<li> 
+                <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+                <a href="index.html">Home</a>
             </li>
+            <!--Having this move to a tag for now as I am developing a review page-->
+            <li><a href="#reviews">Reviews</a></li>
         	<li><a id="button" href="#about">About</a></li>
     	</ul>
 	</nav>
+    
+    <header>
+        <h1 >Welcome To Crystal Heart</h1>
+    </header>
 
     <main>
         <section id="about">
             <!--Introduction Section-->
-        <h2>Nintendo is One of My Favorite Game Companies</h2>
+        <h2>About Crystal Heart:</h2>
         <p>
-            Growing up, my fondest memories of playing games are closely tied to Nintendo. Whether it was trying to beat the final level of New Super Mario Bros 
-            or hiding under my bedsheets past my bedtime to play Pok&#233;mon, Nintendo games were a significant part of my childhood and I still enjoy them to this day.
-            In fact, Nintendo games have had such an impact on me that I want to take the time to write about my favorite titles 
-            and what makes them so great.
+            I have played video games for as long as I can remember. Growing up, it was the thing I looked forward to most after school, and now it is my go to activity when I need to wind down after a long day.
+            Crystal Heart is a site where I can review some of my favorite games of all time and talk about what makes them so great and why I grew to love them.
+            The name "Crystal Heart" pays homage to two of my favorite game series: Final Fantasy and Kingdom Hearts.
         </p>
         <h2>My Review Process is as Follows:</h2>
         <!--Unordered List for criteria-->
@@ -55,28 +59,28 @@
         </p>
         </section>
         <!--Leaving this here for now, but this is in need of a revamp due to the new navigation-->    
-        <aside>
-            <h2>Check Out My Recent Articles in a New Tab!</h2>
+        <aside id="reviews">
+            <h2>Check Out My Recent Articles</h2>
         <!--Links to other pages for review-->
             <div>
-                <a href="xenoblade.html" target="_blank">
-                    <img src="Images/xenoblade.jpg" alt="Xenoblade Chronicles Title Screen" >
-                    <h3>Xenoblade Chronicles Review</h3>
+                <a href="final-fantasy.html">
+                    <img src="Images/Final_Fantasy.png" alt="Cloud Strife from Final Fantasy 7" >
+                    <h3>Final Fantasy 7 Review</h3>
                 </a>
             </div>
             
             <div>
-                <a href="breath-of-the-wild.html" target="_blank">
-                    <img src="Images/breath-of-the-wild.jpg" alt="Legend of Zelda: Tears of the Kingdom Title Screen" >
+                <a href="tears-of-the-kingdom.html">
+                    <img src="Images/Legend_Of_Zelda.png" alt="Link from Legend of Zelda" >
                     <h3>Legend of Zelda: Tears of the Kingdom Review in Progress</h3>
                 </a>
                 
             </div>
             
             <div>
-                <a href="pokemon-black-white.html" target="_blank">
-                    <img src="Images/pokemon-black-white.jpg" alt="Pokemon Black and White Title Screen" >
-                    <h3>Legend of Zelda: Breath of the Wild Review</h3>
+                <a href="kingdom-hearts.html">
+                    <img src="Images/Kingdom_Hearts.png" alt="Sora from Kingdom Hearts" >
+                    <h3>Kingdom Hearts 2 Review</h3>
                 </a>
                 
             </div>
@@ -85,7 +89,7 @@
     </main>   
     <!--Footer to credit Nintendo for images-->
     <footer>
-        <p>All images used are copyrighted material and trademarks of Nintendo.</p>
+        <p>Copyright &copy; Joshua Knight</p>
     </footer>
     
 </body>
