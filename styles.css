@@ -235,7 +235,7 @@ footer{
   
 }
 
-@media only screen and (max-width: 580px){
+@media only screen and (max-width: 595px){
     #nav_menu li {
         font-size: 150%;
         margin: .5em .5em .5em .5em;
