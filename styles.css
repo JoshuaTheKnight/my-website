@@ -186,6 +186,23 @@ footer{
         "about"
         "sidebar";
     }
+
+    section{
+        padding: 0 .7em;
+        width: 90%;
+    }
+
+    aside{
+        
+    }
+
+    aside h2{
+        margin: 0;
+    }
+
+    aside div a img, aside div a h3{
+        margin-right: 0;
+    }
 }
 
 @media only screen and (max-width: 825px){
@@ -222,11 +239,11 @@ footer{
         align-items: center;
     }
     section{
-        width: 90%;
+        width: 92%;
         margin-left: 0;
     }
     aside{
-        width: 90%;
+        width: 92%;
         padding: 0 .5em;
     }   
     footer{
@@ -244,12 +261,11 @@ footer{
 
 @media only screen and (max-width: 379px){
     #nav_menu li {
-        font-size: 150%;
-        margin: .5em .1em .5em .1em;
+        font-size: 130%;
     }
 }
 
-@media only screen and (max-width: 321px){
+@media only screen and (max-width: 331px){
     #nav_menu li{
         font-size: 120%;
     }
