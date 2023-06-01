@@ -242,9 +242,15 @@ footer{
     }
 }
 
-@media only screen and (max-width: 330px){
+@media only screen and (max-width: 379px){
     #nav_menu li {
         font-size: 150%;
         margin: .5em .1em .5em .1em;
+    }
+}
+
+@media only screen and (max-width: 321px){
+    #nav_menu li{
+        font-size: 120%;
     }
 }
