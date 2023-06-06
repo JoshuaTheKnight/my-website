@@ -78,60 +78,27 @@ body {
 
 p,
 li {
-    font-size: 150%;
+    font-size: 130%;
     font-weight: 150;
     font-family: 'Nunito Sans', sans-serif;
 }
 
-/*Setting up a basic grid layout now, plan to revamp entire layout but I need more time*/
 main {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, .5fr);
-    grid-template-areas:
-        "article"
-        "about";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "review1 review2 review3"; 
 }
 
 main h2 {
-    font-size: 200%;
+    font-size: 150%;
 }
 
-/*section styles*/
-section {
-    display: flex;
-    margin-top: 1.5em;
-    grid-area: about;
-}
-
-#review {
-    flex: 1;
-    margin-left: 3em;
-    margin-right: 1em;
-}
-
-#intro {
-    flex: 1;
-    margin-right: 3em;
-    margin-left: 1em;
-}
-
-section p {
-    margin-bottom: 3em;
-}
-
-section ul {
-    padding-top: .5em;
-    padding-left: 3em;
-    margin-bottom: 1em;
-}
 /*Article Styles*/
 article {
-    grid-area: article;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .card {
@@ -139,17 +106,21 @@ article {
     border-radius: 1em;
     border: 1px solid black;
     box-shadow: 0px 2px 20px var(--clr-gray-light);
-    width: 50%;
+    width: 75%;
     overflow: hidden;
     background-color: #ffffff;
     margin: 3em 0;
     transition: 250ms all ease-in-out;
     cursor: pointer;
+    
 }
 
 .card a {
     display: flex;
+    flex-direction: column;
     text-decoration: none;
+    height: 10%;
+    
 }
 
 .card:hover {
@@ -158,30 +129,39 @@ article {
 }
 
 .card-body {
-    margin-left: .5em;
-    flex: 1.5;
+    margin-left: .5em;;
+    
 }
 
 .card-body h2 {
-    margin-bottom: 5em;
+    margin: .5em;
     text-align: center;
 }
 
 .card-banner {
     text-align: center;
-    border-right: .2em solid black;
-    flex: 2;
 }
 
 .banner-img {
-    width: 100%;
-    height: 100%;
+    width: 150%;
+    height: 50%;
     object-fit: cover;
     margin-right: 2em;
+    border-bottom: .1em solid black;
 }
 
 .card-banner {
     width: 80%;
+}
+
+#ff{
+    grid-area: review2;
+}
+#kh{
+    grid-area: review3;
+}
+#loz{
+    grid-area: review1;
 }
 
 /*Footer styles*/
@@ -252,6 +232,15 @@ footer {
         order: 2;
         margin: .5em 2em .5em 2em;
         flex-wrap: nowrap;
+    }
+
+    main{
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "review1"
+        "review2"
+        "review3";
     }
 
     section {

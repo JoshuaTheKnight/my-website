@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,89 +9,91 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans:wght@300&family=PT+Sans&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans:wght@300&family=PT+Sans&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/bcb9fa309a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
-    
+
+
     <!--Navigation Menu-->
-	<nav id="nav_menu">
-    	<a id="nav_logo" href="index.html">
+    <nav id="nav_menu">
+        <a id="nav_logo" href="index.html">
             <img src="Images/logo.png" alt="Crystal Heart Logo">
             Crystal Heart
         </a>
         <ul>
-        	<li> 
+            <li>
                 <i class="fa-solid fa-house" style="color: #ffffff;"></i>
                 <a href="index.html">Home</a>
             </li>
             <!--Having this move to a tag for now as I am developing a review page-->
-            <li><a href="#reviews" class="review">Reviews</a></li>
-        	<li><a id="button" href="#about">About</a></li>
-    	</ul>
-	</nav>
-    
+            <li><a href="reviews.html" class="review">Reviews</a></li>
+            <li><a id="button" href="#about">About</a></li>
+        </ul>
+    </nav>
+
     <header>
-        <h1 >Welcome To Crystal Heart</h1>
+        <h1>Article of the Day</h1>
     </header>
 
     <main>
         <section id="about">
             <!--Introduction Section-->
-        <h2>About Crystal Heart:</h2>
-        <p>
-            I have played video games for as long as I can remember. Growing up, it was the thing I looked forward to most after school, and now it is my go to activity when I need to wind down after a long day.
-            Crystal Heart is a site where I can review some of my favorite games of all time and talk about what makes them so great and why I grew to love them.
-            The name "Crystal Heart" pays homage to two of my favorite game series: Final Fantasy and Kingdom Hearts.
-        </p>
-        <h2>My Review Process is as Follows:</h2>
-        <!--Unordered List for criteria-->
-        <ul>
-            <li>Gameplay</li>
-            <li>Sound and Music</li>
-            <li>Story</li>
-            <li>Artstyle</li>
-            <li>The <em class="rainbow">&copy;OFFICIAL SIR JOSHUA KNIGHT FUN FACTOR SCORE&copy;</em> &#40;Copyright Pending&#41;</li>
-        </ul>
-        <p>
-            By virtue of these being my favorite games, they all will review high; 
-            however, I will still give them a final letter grade to preserve the culture.
-        </p>
+            <div id="intro">
+                <h2>Crystal Heart:</h2>
+                <p>
+                    Welcome to Crystal Heart, a review site dedicated to the power of positivity in the gaming world.
+                    Here, I invite you to delve into the games that have captured my heart and left a lasting impact. At
+                    Crystal Heart, our rapid-fire reviews offer concise yet insightful glimpses into the games we
+                    love.<br><br>
+
+                    In each section, I aim to encapsulate the essence of the game in a paragraph or two. Rather than
+                    focusing solely on technical details and scores, my reviews emphasize the immersive journeys,
+                    meaningful connections, and uplifting moments that these games offer.
+                </p>
+            </div>
+            <div id="review">
+                <h2>My Review Process is as Follows:</h2>
+                <!--Unordered List for criteria-->
+                <ul>
+                    <li>Gameplay</li>
+                    <li>Sound and Music</li>
+                    <li>Story</li>
+                    <li>Artstyle</li>
+                    <li>The <em class="rainbow">&copy;OFFICIAL SIR JOSHUA KNIGHT FUN FACTOR SCORE&copy;</em>
+                        &#40;Copyright Pending&#41;</li>
+                </ul>
+                <p>
+                    By virtue of these being my favorite games, they all will review high;
+                    however, I will still give them a final letter grade to preserve the culture.
+                </p>
+            </div>
         </section>
-        <!--Leaving this here for now, but this is in need of a revamp due to the new navigation-->    
-        <aside id="reviews">
-            <h2>Check Out My Recent Articles</h2>
-        <!--Links to other pages for review-->
-            <div>
-                <a href="final-fantasy.html">
-                    <img src="Images/Final_Fantasy.png" alt="Cloud Strife from Final Fantasy 7" >
-                    <h3>Final Fantasy 7 Review</h3>
-                </a>
-            </div>
-            
-            <div>
-                <a href="tears-of-the-kingdom.html">
-                    <img src="Images/Legend_Of_Zelda.png" alt="Link from Legend of Zelda" >
-                    <h3>Legend of Zelda: Tears of the Kingdom Review in Progress</h3>
-                </a>
-                
-            </div>
-            
-            <div>
-                <a href="kingdom-hearts.html">
-                    <img src="Images/Kingdom_Hearts.png" alt="Sora from Kingdom Hearts" >
-                    <h3>Kingdom Hearts 2 Review</h3>
-                </a>
-                
-            </div>
-        </aside>
         
-    </main>   
-    <!--Footer to credit Nintendo for images-->
+        <article>
+            <div class="card">
+                <a href="final-fantasy.html">
+                    <div class="card-banner">
+                        <img class="banner-img" src="Images/Final_Fantasy.png">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="review-title">Final Fantasy 7 Review</h2>
+                        <p class="review-description">
+                            Final Fantasy 7 is a vast game with compelling characters and an
+                            amazing story. It is worthy of all the praise it gets.
+                            It is my favorite game in one of my favorite series of all time.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </article>
+
+    </main>
     <footer>
         <p>Copyright &copy; Crystal Heart</p>
     </footer>
-    
 </body>
 </html>
