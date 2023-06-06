@@ -1,0 +1,8 @@
+"After poking around a little on your site, I wish there was more content."
+"the about section looked small compared to the sidebar of reviews."
+
+Most of the suggestions that I got revolved around creating more content because I just had the homepage at the time.
+I added a couple extra pages and an "About the Author" Section to fulfill the requests to add more content and flesh out the about section.
+
+In the future I hope I can finally solidify a style for my website. I am trying to work on an article card style for my review links, but I feel like
+mine are overdesigned and they are giving me issues. Given some time I should be able to find a good system that doesn't present so many issues.

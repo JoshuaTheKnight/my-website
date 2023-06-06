@@ -1,0 +1,229 @@
+/*Reset*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    --clr-gray-light: #d7dfe2;
+    --clr-gray-med: #616b74;
+    --clr-gray-dark: #414b56;
+}
+
+/*header styles*/
+
+header {
+    background-image: linear-gradient(rgba(87, 87, 87, 0.5), rgba(26, 26, 26, 0.5)), url('Images/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    padding: 2em 0 2em 0;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .1em solid black;
+    height: 12.5em;
+}
+
+h1 {
+    color: #ffffff;
+    width: 65%;
+    text-align: center;
+    border-radius: 2em;
+}
+
+/*nav styles*/
+#nav_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #262727;
+    border-bottom: .1em solid black;
+}
+
+#nav_logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 150%;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    flex: 1;
+}
+
+#nav_menu a img {
+    max-height: 2em;
+    max-width: 2em;
+}
+
+#nav_menu li {
+    display: inline-block;
+    margin-right: 3em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#nav_menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    flex: 2;
+}
+
+/*body styles*/
+body {
+    background-color: #fafafa;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+}
+
+p,
+li {
+    font-size: 150%;
+    font-weight: 150;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/*Setting up a basic grid layout now, plan to revamp entire layout but I need more time*/
+main {
+    display: flex;
+}
+
+main h2 {
+    font-size: 200%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/*section styles*/
+section {
+   margin: .5em 1em 0 1em;
+   flex: 2;
+}
+
+section h2{
+    
+}
+
+figure{
+    flex: 2;
+}
+
+figure img{
+    max-width: 80%;
+    margin: .5em 1em 0 1em;
+    border-radius: .5em;
+    border: .1em solid #000000;
+}
+
+section p {
+    margin-bottom: 3em;
+}
+
+/*Footer styles*/
+footer {
+    font-size: 60%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    padding-left: 5em;
+    background-color: #262727;
+    color: #ffffff;
+    height: 2.5em;
+}
+
+/*class selectors*/
+
+/*Sets a rainbow text effect. the background clip fills in the transparent text with the rainbow background gradient. Had to add webkit properties because it wasn't rendering properly in my browser */
+.rainbow {
+    background-image: linear-gradient(to left, #cc49cc, #4b0082, #0000ff, #008000, #969607, #b87b0b, #ff0000);
+    background-clip: text;
+    color: #ffffff00;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+/*pseudo classes*/
+:link {
+    color: #000000;
+}
+
+:visited {
+    color: #42C2FF;
+}
+
+
+
+
+
+@media only screen and (max-width: 825px) {
+    #nav_menu {
+        flex-direction: column;
+    }
+
+    #nav_logo {
+        justify-content: center;
+    }
+
+    #nav_logo a {
+        order: 1;
+    }
+
+    #nav_menu li {
+        order: 2;
+        margin: .5em 2em .5em 2em;
+        flex-wrap: nowrap;
+    }
+}
+
+@media only screen and (max-width:700px){
+    main{
+        flex-direction: column;
+    }
+    figure{
+        text-align: center;
+    }
+    figure img{
+        margin: none;
+        width: 50%;
+    }
+    section h2{
+        text-align: center;
+        margin-bottom: 1em;
+    }
+}
+
+/*media query to swap to a column format*/
+@media only screen and (max-width: 691px) {
+    h1 {
+        width: 100%;
+        font-size: 180%;
+    }
+
+    nav ul ul li {
+        font-size: 90%;
+    }
+
+    footer {
+        font-size: 40%;
+    }
+
+}
+
+@media only screen and (max-width: 595px) {
+    #nav_menu li {
+        font-size: 150%;
+        margin: .5em .5em .5em .5em;
+    }
+}
+
+@media only screen and (max-width: 379px) {
+    #nav_menu li {
+        font-size: 130%;
+    }
+}
+
+@media only screen and (max-width: 331px) {
+    #nav_menu li {
+        font-size: 120%;
+    }
+}
