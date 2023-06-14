@@ -129,11 +129,9 @@ article {
 
 /*Putting card in a tag caused issues until I made it replicate some card class elements*/
 .card a {
-    display: flex;
     flex-direction: column;
     text-decoration: none;
     height: 10%;
-
 }
 
 /*transform on hover, add another box shadow so it looks like it is growing when it is scaled up*/
