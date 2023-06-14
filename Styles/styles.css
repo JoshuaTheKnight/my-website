@@ -28,6 +28,7 @@ header {
 h1 {
     color: #ffffff;
     width: 65%;
+    font-size: 350%;
     text-align: center;
     border-radius: 2em;
 }
@@ -69,7 +70,7 @@ h1 {
     flex: 2;
 }
 
-#nav_menu .current{
+#nav_menu .current {
     color: #42C2FF;
 }
 
@@ -129,6 +130,7 @@ section ul {
     padding-left: 3em;
     margin-bottom: 1em;
 }
+
 /*Article Styles*/
 article {
     grid-area: article;
@@ -138,6 +140,7 @@ article {
 
 }
 
+/*Initial card container. set up a box shadow to add depth and have a transition for style. add hidden overflow so image corner rounds at top*/
 .card {
     display: flex;
     border-radius: 1em;
@@ -151,18 +154,20 @@ article {
     cursor: pointer;
 }
 
+/*Putting card in a tag caused issues until I made it replicate some card class elements*/
 .card a {
     display: flex;
     text-decoration: none;
 }
 
+/*transform on hover, add another box shadow so it looks like it is growing when it is scaled up*/
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0px 2px 40px var(--clr-gray-light);
 }
 
 .card-body {
-    margin:0 .5em;
+    margin: 0 .5em;
     flex: 1.5;
 }
 
@@ -170,7 +175,7 @@ article {
     text-align: center;
 }
 
-.card-body p{
+.card-body p {
     text-align: center;
     padding-top: 2em;
 }
@@ -181,15 +186,12 @@ article {
     flex: 2;
 }
 
+/*make image cover to keep it consistent*/
 .banner-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     margin-right: 2em;
-}
-
-.card-banner {
-    width: 80%;
 }
 
 /*Footer styles*/
@@ -223,6 +225,7 @@ footer {
     color: #42C2FF;
 }
 
+/*Adjust font sizes for card*/
 @media only screen and (max-width: 1100px) {
     .card-body h2 {
         font-size: 175%;
@@ -233,14 +236,16 @@ footer {
     }
 }
 
-@media only screen and (max-width: 950px){
+@media only screen and (max-width: 950px) {
+
     /*Increase width to improve visibility*/
-    .card{
+    .card {
         width: 55%;
     }
 }
 
 @media only screen and (max-width: 825px) {
+
     /*Edit nav menu into a mobile format*/
     #nav_menu {
         flex-direction: column;
@@ -259,19 +264,21 @@ footer {
         margin: .5em 2em .5em 2em;
         flex-wrap: nowrap;
     }
+
     /*Change the view sizes to even out area*/
-    main{
+    main {
         grid-template-columns: 1fr;
         grid-template-rows: .2fr 1fr;
         grid-template-areas:
-        "article"
-        "about";
+            "article"
+            "about";
     }
+
     /*Turn description into a column format. Setting flex to 1 fixes issue where the intro would take up more space*/
     section {
         flex-direction: column;
     }
-    
+
     #review {
         flex: 1;
         margin-left: 1em;
@@ -283,7 +290,8 @@ footer {
         margin-right: 1em;
         margin-left: 1em;
     }
-/*Alter the card into a vertical card*/
+
+    /*Alter the card into a vertical card*/
     .card a {
         flex-direction: column;
     }
@@ -302,36 +310,43 @@ footer {
 
 }
 
-/*Get rid of article description to preserve space*/
+/*Get rid of article description to preserve space. Reduce Header and Footer size*/
 @media only screen and (max-width: 691px) {
-   
+
     footer {
         font-size: 40%;
     }
 
-    .card-body p{
+    .card-body p {
         display: none;
     }
 
+    h1{
+        font-size: 300%;
+    }
+
 }
+
 /*Shrink to avoid wrap*/
 @media only screen and (max-width: 595px) {
     h1 {
         width: 100%;
-        font-size: 180%;
+        font-size: 250%;
     }
-    
+
     #nav_menu li {
         font-size: 150%;
         margin: .5em .5em .5em .5em;
     }
 }
+
 /*Increase article card size to increase readability*/
-@media only screen and (max-width: 450px){
-    .card{
+@media only screen and (max-width: 450px) {
+    .card {
         width: 60%;
     }
 }
+
 /*Continue to shrink nav to avoid wrapping*/
 @media only screen and (max-width: 379px) {
     #nav_menu li {

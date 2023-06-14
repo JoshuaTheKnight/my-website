@@ -28,6 +28,7 @@ header {
 h1 {
     color: #ffffff;
     width: 65%;
+    font-size: 350%;
     text-align: center;
     border-radius: 2em;
 }
@@ -41,6 +42,7 @@ h1 {
     border-bottom: .1em solid black;
 }
 
+/*Sets up the logo on the left to be centered so the image is next to the text*/
 #nav_logo {
     display: flex;
     align-items: center;
@@ -57,6 +59,7 @@ h1 {
     max-width: 2em;
 }
 
+/*Centers list elements*/
 #nav_menu li {
     display: inline-block;
     margin-right: 3em;
@@ -69,7 +72,7 @@ h1 {
     flex: 2;
 }
 
-#nav_menu .current{
+#nav_menu .current {
     color: #42C2FF;
 }
 
@@ -91,16 +94,18 @@ main h2 {
     font-size: 200%;
 }
 
-/*section styles*/
-section{
+/*section styles
+  grouped everything in sections so they can all be evenly spaced  
+*/
+section {
     margin: 2em;
 }
 
-section h2{
+section h2 {
     margin-top: 1em;
 }
 
-section em{
+section em {
     font-family: 'PT Sans', sans-serif !important;
     padding-right: 1em;
 }
@@ -137,6 +142,7 @@ footer {
 }
 
 @media only screen and (max-width: 825px) {
+
     /*Edit nav menu into a mobile format*/
     #nav_menu {
         flex-direction: column;
@@ -157,25 +163,30 @@ footer {
     }
 }
 
-/*Get rid of article description to preserve space*/
 @media only screen and (max-width: 691px) {
-   
+
     footer {
         font-size: 40%;
     }
+
+    h1{
+        font-size: 300%;
+    }
 }
-/*Shrink to avoid wrap*/
+
+/*Shrink to avoid nav wrap*/
 @media only screen and (max-width: 595px) {
     h1 {
         width: 100%;
-        font-size: 180%;
+        font-size: 250%;
     }
-    
+
     #nav_menu li {
         font-size: 150%;
         margin: .5em .5em .5em .5em;
     }
 }
+
 /*Continue to shrink nav to avoid wrapping*/
 @media only screen and (max-width: 379px) {
     #nav_menu li {

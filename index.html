@@ -20,8 +20,6 @@
 </head>
 
 <body>
-
-
     <!--Navigation Menu-->
     <nav id="nav_menu">
         <a id="nav_logo" href="index.html">
@@ -39,12 +37,29 @@
             <li><a id="button" href="about.html">About</a></li>
         </ul>
     </nav>
-
     <header>
         <h1>Article of the Day</h1>
     </header>
-
     <main>
+        <!--Article Card Section-->
+        <article>
+            <div class="card">
+                <a href="Review-Pages/final-fantasy.html">
+                    <div class="card-banner">
+                        <img class="banner-img" src="Images/Final_Fantasy.png" alt="Cloud From Final Fantasy">
+                    </div>
+                    <div class="card-body">
+                        <h2>Final Fantasy 7 Review</h2>
+                        <p>
+                            Final Fantasy 7 is a vast game with compelling characters and an
+                            amazing story. It is worthy of all the praise it gets.
+                            It is my favorite game in one of my favorite series of all time.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </article>
+        <!--Put entire "about" part into one section and then use divs to manage through flexbox-->
         <section id="about">
             <!--Introduction Section-->
             <div id="intro">
@@ -63,6 +78,7 @@
                     game an unforgettable experience.
                 </p>
             </div>
+            <!--Review Process Section-->
             <div id="review">
                 <h2>Our Review Process is as Follows:</h2>
                 <!--Unordered List for criteria-->
@@ -81,25 +97,6 @@
                 </p>
             </div>
         </section>
-
-        <article>
-            <div class="card">
-                <a href="Review-Pages/final-fantasy.html">
-                    <div class="card-banner">
-                        <img class="banner-img" src="Images/Final_Fantasy.png">
-                    </div>
-                    <div class="card-body">
-                        <h2 class="review-title">Final Fantasy 7 Review</h2>
-                        <p class="review-description">
-                            Final Fantasy 7 is a vast game with compelling characters and an
-                            amazing story. It is worthy of all the praise it gets.
-                            It is my favorite game in one of my favorite series of all time.
-                        </p>
-                    </div>
-                </a>
-            </div>
-        </article>
-
     </main>
     <footer>
         <p>Copyright &copy; Crystal Heart</p>
